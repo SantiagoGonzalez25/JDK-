@@ -3,8 +3,7 @@ import usuarios.Usuario;
 import java.sql.Date;
 
 public class Ventas {
-    @SuppressWarnings("unused")
-     private long idVenta;
+    private long idVenta;
     private String cliente;
     private Usuario vendedor;
     private Date fechaDeVenta;
