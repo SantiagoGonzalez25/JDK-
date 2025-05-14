@@ -1,5 +1,4 @@
-package Rutas_Ventas;
-
+package rutas_Ventas;
 import java.util.List;
 
 public class ModeloRuta {

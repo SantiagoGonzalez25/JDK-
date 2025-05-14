@@ -1,8 +1,8 @@
-package Rutas_Ventas;
+package rutas_Ventas;
 import java.sql.Date;
 
 import Usuarios.*;
-public class AsignacionRuta {
+public class Ruta {
     @SuppressWarnings("unused")
     private long id;
     private Date FechaAsignacion;

@@ -1,4 +1,4 @@
-package Rutas_Ventas;
+package rutas_Ventas;
 
 import java.sql.Date;
 
