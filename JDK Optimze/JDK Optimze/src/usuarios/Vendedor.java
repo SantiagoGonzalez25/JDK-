@@ -9,7 +9,7 @@ public class Vendedor extends Usuario {
     private Date horario;
     @SuppressWarnings("unused")
     private double comision;
-    private Estados estado;
+    private Estados estado;//ksdkskdslkdslkdlsd
     private String venta;
 
     public Vendedor(long id, String nombre, String contraseña, String Email, String rutaAsignada, Date horario,
