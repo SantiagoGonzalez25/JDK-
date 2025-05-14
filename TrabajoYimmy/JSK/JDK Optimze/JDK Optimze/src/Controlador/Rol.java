@@ -2,6 +2,7 @@ package Controlador;
 import java.util.InputMismatchException;
 
 import Enums.Roles;
+@SuppressWarnings("unused")
 public class Rol {
     private Roles rol;
     {
@@ -17,6 +18,9 @@ public class Rol {
             case VENDEDOR:
                 System.out.println("Tu funcion principal es gestionar ventas y relaciones con clientes visitando tiendas asignadas.");
                 break;
+            case NOASIGNADO:
+                System.out.println("No tienes ningun rol asignado actualmente");
+                break; 
             } 
         }
     

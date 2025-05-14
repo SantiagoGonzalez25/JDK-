@@ -1,9 +1,13 @@
 package Usuarios;
 
 public abstract class Usuario {
+    @SuppressWarnings("unused")
     private long Id;
+    @SuppressWarnings("unused")
     private String Nombre;
+    @SuppressWarnings("unused")
     private String Contraseña;
+    @SuppressWarnings("unused")
     private String Email; 
     
     public Usuario(long id, String nombre, String contraseña, String Email) {

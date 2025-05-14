@@ -3,6 +3,7 @@ package Rutas_Ventas;
 import java.sql.Date;
 
 public class Ventas {
+    @SuppressWarnings("unused")
     private long IdVenta;
     private String Cliente;
     private String Vendedor;

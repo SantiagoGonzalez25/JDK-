@@ -4,10 +4,13 @@ import java.sql.Date;
 import Enums.Estados;
 
 public class Vendedor extends Usuario {
+    @SuppressWarnings("unused")
     private String rutaAsignada;
+    @SuppressWarnings("unused")
     private Date horario;
     private double comision;
     private Estados estado;
+    @SuppressWarnings("unused")
     private String venta;
 
     public Vendedor(long id, String nombre, String contrasena, String email, String rutaAsignada, Date horario,

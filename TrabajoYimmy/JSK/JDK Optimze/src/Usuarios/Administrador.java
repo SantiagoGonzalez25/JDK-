@@ -1,47 +1,35 @@
 package Usuarios;
-
-import java.sql.Date;
+import Enums.Roles; 
 import Enums.Estados;
 
 
-public class Administrador{
-
+public class Administrador extends Usuario{
     private long Adminid; 
-    private String nombre;
-    private String contrasena;
-    private String email;
-    
-    public Administrador(long adminid, String nombre, String contrasena, String email) {
-        this.Adminid = adminid;
-        this.nombre = nombre;
-        this.contrasena = contrasena;
-        this.email = email;
-    }
+    private Roles rol; // Variable para el asignamiento de roles
+    private Usuario usuario; // Variable para acceder a los usuarios
 
+    public Administrador(long id, String nombre, String contrasena, String email, long adminid, Roles rol) {
+        super(id, nombre, contrasena, email);
+        this.rol = rol;
+        this.Adminid = adminid;
+    }
+    
     public long getAdminid() {
         return Adminid;
     }
-    public String getNombre() {
-        return nombre;
-    }
 
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public Usuario crearUsuario(long id, String nombre, String contrasena, String email, String rol) {
-        switch (rol.toUpperCase()) {
-
-            case "VENDEDOR": return new Vendedor(id, nombre, contrasena, email, /*rutaAsignada*/"", /*horario*/null, /*comision*/0, Estados.ACTIVO);
-
-            case "IMPULSADOR": return new Impulsador(id, nombre, contrasena, email, new Date(System.currentTimeMillis()), /*rutaAsignada*/"", null);
-            default:
-                throw new IllegalArgumentException("Rol desconocido: " + rol);
-        }
+    public Usuario AsignarRol() { //el administrador no tiene el metodo de crear usuario, el asigna el rol y configura el usuario accediendo a la clase usuario
+       switch (rol) {
+        case COORDINADOR:
+            return usuario;
+        case IMPULSADOR:
+            return usuario;
+        case VENDEDOR:     
+            return usuario;
+        default:
+            System.out.println("No se ha asignado ningun rol");
+            return usuario;
+       }
     }
 }
     

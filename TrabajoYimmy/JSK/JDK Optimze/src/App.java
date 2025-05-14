@@ -10,7 +10,10 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-       
+    System.out.println("Ola, soy homero chino ");
+    }
+} // Todo comentado, NO LO HAGAS SOLO MARIO
+    /*    
         Administrador admin = new Administrador(1, "Andrés Trabas", "admin123", "admin@jsk.com");
     
 
@@ -63,5 +66,4 @@ public class App {
         notificacionVendedor.Enviar();
     }
 }
-
-
+*/

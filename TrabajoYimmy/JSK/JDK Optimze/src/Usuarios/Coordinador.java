@@ -2,7 +2,7 @@ package Usuarios;
 
 public class Coordinador extends Usuario {
     private String rutasEstablecidas; 
-    private String areaEstablecida; //area en la que el coordinador opera
+    private String areaEstablecida; // Area en la que el coordinador opera
     
     public Coordinador(long id, String nombre, String contrasena, String email, String rutasEstablecidas, String areaEstablecida) {
         super(id, nombre, contrasena, email);

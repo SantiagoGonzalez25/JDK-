@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class Impulsador extends Usuario {
     private Date Horario;
+    @SuppressWarnings("unused")
     private String PuntoDeVenta;
     private String VerVentas;
     

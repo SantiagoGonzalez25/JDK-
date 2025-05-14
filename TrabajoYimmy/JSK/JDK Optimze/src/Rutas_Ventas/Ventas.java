@@ -23,7 +23,7 @@ public class Ventas {
     }
 
      public String obtenerDetalleVenta() {
-        return "Venta ID: " + idVenta + " - Monto: $" + monto;
+        return "Venta ID: " + idVenta + " - Monto: $" + monto + "Vendedor: " + vendedor + "Fecha de la venta" + fechaDeVenta; // Se hace el cambio de saber que vendedor realizo la venta, su registro y la fecha 
     }
     
     public String AsignarCliente(){
@@ -32,6 +32,7 @@ public class Ventas {
     public Date AsignarFecha(){
         return fechaDeVenta;
     }
+
     public String getVendedor(){
         return vendedor.getNombre(); 
     }

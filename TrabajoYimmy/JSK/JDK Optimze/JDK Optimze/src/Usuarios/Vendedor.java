@@ -5,7 +5,9 @@ import Enums.*;
 
 public class Vendedor extends Usuario {
     private String rutaAsignada;
+    @SuppressWarnings("unused")
     private Date horario;
+    @SuppressWarnings("unused")
     private double comision;
     private Estados estado;
     private String venta;

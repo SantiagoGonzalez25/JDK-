@@ -3,9 +3,11 @@ import java.sql.Date;
 
 import Usuarios.*;
 public class AsignacionRuta {
+    @SuppressWarnings("unused")
     private long id;
     private Date FechaAsignacion;
     private Usuario usuario;
+    @SuppressWarnings("unused")
     private ModeloRuta modeloRuta;
     public AsignacionRuta(long id, Date fechaAsignacion, Usuario usuario, ModeloRuta modeloRuta) {
         this.id = id;

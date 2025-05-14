@@ -4,7 +4,9 @@ import java.io.File;
 import java.sql.Date;
 
 public class Informe {
+    @SuppressWarnings("unused")
     private long Id;
+    @SuppressWarnings("unused")
     private Date Periodo; // en vez de string date 
     private File FormatoDeImportacion; // En vez de string file 
     private boolean Informe = false;

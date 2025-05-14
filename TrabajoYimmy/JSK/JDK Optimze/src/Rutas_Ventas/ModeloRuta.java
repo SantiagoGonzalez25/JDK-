@@ -1,7 +1,8 @@
 package Rutas_Ventas;
 
-import java.util.List;
-
+//import java.util.List;
+// Se comenta toda la clase para decidir que hacer con ella (si se vuelve un controlador o no)
+/* 
 public class ModeloRuta {
     private long id;
     private List<String> PuntosVenta;
@@ -32,4 +33,4 @@ public class ModeloRuta {
 
     
 }
-
+*/
