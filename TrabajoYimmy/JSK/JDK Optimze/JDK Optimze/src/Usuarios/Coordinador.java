@@ -1,4 +1,4 @@
-package Usuarios;
+package usuarios;
 
 public class Coordinador extends Usuario {
     private String RutasEstablecidas; 
@@ -11,7 +11,7 @@ public class Coordinador extends Usuario {
         this.AreaEstablecida = AreaEstablecida;
     }
 
-    public String EstablecerRutas(){
+    public String DefinirRutas(){
         return RutasEstablecidas;
     }
 }

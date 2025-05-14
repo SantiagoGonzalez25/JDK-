@@ -1,22 +1,33 @@
-package Usuarios;
+package usuarios; 
+import enums.*;
 
-public class Administrador extends Usuario {
 
-    private Usuario usuario;
-    public Administrador(long id, String nombre, String contraseña, String Email) {
-        super(id, nombre, contraseña, Email);
+public class Administrador extends Usuario{
+    private long Adminid; 
+    private Roles rol; // Variable para el asignamiento de roles
+    private Usuario usuario; // Variable para acceder a los usuarios
+
+    public Administrador(long id, String nombre, String contrasena, String email, long adminid, Roles rol) {
+        super(id, nombre, contrasena, email);
+        this.rol = rol;
+        this.Adminid = adminid;
     }
     
-    public Usuario CrearUsuario(){
-        return usuario;
+    public long getAdminid() {
+        return Adminid;
     }
-    
-    public Usuario AsignarRol(){
-        return usuario;
+
+    public Usuario AsignarRol() { //el administrador no tiene el metodo de crear usuario, el asigna el rol y configura el usuario accediendo a la clase usuario
+       switch (rol) {
+        case COORDINADOR:
+            return usuario;
+        case IMPULSADOR:
+            return usuario;
+        case VENDEDOR:     
+            return usuario;
+        default:
+            System.out.println("No se ha asignado ningun rol");
+            return usuario;
+       }
     }
-    
-    public Usuario EliminarUsuario(){
-        return usuario;
-    }
-    
 }

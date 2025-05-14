@@ -1,5 +1,5 @@
-package Info;
-import Usuarios.Usuario;
+package info;
+import usuarios.Usuario;
 import java.sql.Date;
 public class Notificaciones {
     private String Mensaje;

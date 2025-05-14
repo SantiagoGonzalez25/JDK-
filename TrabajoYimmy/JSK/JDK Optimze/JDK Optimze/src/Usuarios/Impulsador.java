@@ -1,5 +1,4 @@
-package Usuarios;
-
+package usuarios;
 import java.sql.Date;
 
 public class Impulsador extends Usuario {

@@ -1,7 +1,7 @@
-package Usuarios;
+package usuarios;
 
 import java.sql.Date;
-import Enums.*;
+import enums.*;
 
 public class Vendedor extends Usuario {
     private String rutaAsignada;
