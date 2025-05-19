@@ -1,39 +1,40 @@
+// Usuario.java
 package usuarios;
 
 public abstract class Usuario {
-    private long id;
+    private long idUsuario;
     private String nombre;
-    private String Contrasena;
-    private String email; 
-    
-    public Usuario(long id, String nombre, String contrasena, String email) {
-        this.id = id;
+    private String email;
+    private String contrasena;
+
+    public Usuario(long idUsuario, String nombre, String contrasena, String email) {
+        this.idUsuario = idUsuario;
         this.nombre = nombre;
-        this.Contrasena = contrasena;
+        this.contrasena = contrasena;
         this.email = email;
     }
 
-    public long crearUsuario(){
-        return id;
-    }
-   
-    public boolean autenticar(){
-        return true; 
+    public long crearUsuario() {
+        return idUsuario;
     }
 
-    public long getId(){
-        return id;
+    public boolean autenticar() {
+        return true;
     }
 
-    public String getNombre(){
+    public long getIdUsuario() {
+        return idUsuario;
+    }
+
+    public String getNombre() {
         return nombre;
     }
 
-    public String getContrasena(){
-        return Contrasena;
+    public String getEmail() {
+        return email;
     }
 
-    public String getEmail(){
-        return email;
+    public String getContrasena() {
+        return contrasena;
     }
 }

@@ -1,44 +1,52 @@
+// Ruta.java
 package rutas_Ventas;
+
 import java.sql.Date;
 import usuarios.Usuario;
 
-public class Ruta { // Se cambia el nombre de asignacion de ruta a ruta 
-    private long IdRuta; // Se empiezan a especificar todos los id's 
-    private Date FechaAsignacion;
-    private Usuario usuario;
-    private boolean RutaTomada; // Si la ruta esta tomada o no
-    private String DireccionRuta;  // Cual es la ubicacion de la ruta
+public class Ruta {
+    private long idRuta;
+    private Date fechaAsignacion;
+    private Usuario usuario;    // usuario que creó la ruta (coordinador)
+    private boolean rutaTomada;
+    private String direccionRuta;
 
-    public Ruta(long id, Date fechaAsignacion, Usuario usuario, boolean RutaTomada, String DireccionRuta) { // Nuevas variables al metodo constructor
-        this.IdRuta  = id;
-        this.FechaAsignacion = fechaAsignacion;
+    public Ruta(long idRuta, Date fechaAsignacion,Usuario usuario,boolean rutaTomada,  String direccionRuta) {
+        this.idRuta = idRuta;
+        this.fechaAsignacion = fechaAsignacion;
         this.usuario = usuario;
-        this.RutaTomada = RutaTomada; 
-        this.DireccionRuta = DireccionRuta; 
+        this.rutaTomada = rutaTomada;
+        this.direccionRuta = direccionRuta;
     }
 
-    public long getId() {
-        return IdRuta;
-    }
-
-    public void UbicacionDeRuta(){
-        System.out.println("La ubicacion de la ruta es: " + DireccionRuta);
-    } // Estamos hablando de que la ruta ya esta creada aca, Se tiene que mostrar cual es la ruta
-    
-    public Usuario ElegirRuta(){   // Se cambia el nombre de AsignarRuta a elegir ruta, el vendedor es quien la elige
+    public Usuario elegirRuta() {
         return usuario;
     }
 
-    public Date Fecha(){
-        return FechaAsignacion;
-    }
-    
-    public boolean RutaTomada() {
-        RutaTomada = true;
-        return RutaTomada;
+
+    public Date getFechaAsignacion() {
+        return fechaAsignacion;
     }
 
     public String obtenerDetallesRuta() {
-        return "Ruta ID: " + IdRuta +  " - Asignada a: " + usuario.getNombre();
+        return "Ruta ID: " + idRuta + " - Dirección: " + direccionRuta + " - Ruta tomada: " + rutaTomada;
+    }
+
+    // Getters y setters básicos mínimos
+    public long getIdRuta() {
+        return idRuta;
+    }
+
+    public boolean isRutaTomada() {
+        return rutaTomada;
+    }
+
+    public void setRutaTomada(boolean rutaTomada) {
+        this.rutaTomada = rutaTomada;
+    }
+
+    public void setDireccionRuta(String direccionRuta) {
+        this.direccionRuta = direccionRuta;
     }
 }
+

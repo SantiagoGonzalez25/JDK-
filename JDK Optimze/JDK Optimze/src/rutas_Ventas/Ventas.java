@@ -1,4 +1,6 @@
+// Ventas.java
 package rutas_Ventas;
+
 import usuarios.Usuario;
 import java.sql.Date;
 
@@ -7,12 +9,12 @@ public class Ventas {
     private String cliente;
     private Usuario vendedor;
     private Date fechaDeVenta;
-    private double monto; 
-    
+    private double monto;
+
     public Ventas(long idVenta, String cliente, Usuario vendedor, Date fechaDeVenta, double monto) {
         this.idVenta = idVenta;
         this.cliente = cliente;
-        this.vendedor = vendedor;   
+        this.vendedor = vendedor;
         this.fechaDeVenta = fechaDeVenta;
         this.monto = monto;
     }
@@ -21,24 +23,24 @@ public class Ventas {
         return idVenta;
     }
 
-     public String obtenerDetalleVenta() {
-        return "Venta ID: " + idVenta + " - Monto: $" + monto + "Vendedor: " + vendedor + "Fecha de la venta" + fechaDeVenta; // Se hace el cambio de saber que vendedor realizo la venta, su registro y la fecha 
+    public String obtenerDetalleVenta() {
+        return "Venta ID: " + idVenta + " - Monto: $" + monto;
     }
-    
-    public String AsignarCliente(){
+
+    public String getCliente() {
         return cliente;
     }
-    public Date AsignarFecha(){
+
+    public Date getFechaDeVenta() {
         return fechaDeVenta;
     }
 
-    public String getVendedor(){
-        return vendedor.getNombre(); 
+    public String getVendedor() {
+        return vendedor.getNombre();
     }
 
-    public double getMonto(){
+    public double getMonto() {
         return monto;
     }
 }
-
 

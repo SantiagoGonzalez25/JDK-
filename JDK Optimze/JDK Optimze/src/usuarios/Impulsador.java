@@ -1,26 +1,35 @@
+// Impulsador.java
 package usuarios;
+
 import java.sql.Date;
 
 public class Impulsador extends Usuario {
-    private Date Horario;
+    private Date horario;
     @SuppressWarnings("unused")
-    private String PuntoDeVenta;
-    private String VerVentas;
-    
-    public Impulsador(long id, String nombre, String contraseña, String Email, Date horario, String puntoDeVenta,
-            String verVentas) {
-        super(id, nombre, contraseña, Email);
-        this.Horario = horario;
-        this.PuntoDeVenta = puntoDeVenta;
-        this.VerVentas = verVentas;
+    private String puntoDeVenta;
+    private String verVentas;
+
+    public Impulsador(long idUsuario, String nombre, String contrasena, String email,
+                      Date horario, String puntoDeVenta, String verVentas) {
+        super(idUsuario, nombre, contrasena, email);
+        this.horario = horario;
+        this.puntoDeVenta = puntoDeVenta;
+        this.verVentas = verVentas;
     }
 
-    public String VerVentas(){ 
-        return VerVentas;
+    public String verVentas() {
+        return verVentas;
     }
-   
-    public Date VerHorario(){
-        return Horario;
+
+    public Date verHorario() {
+        return horario;
     }
-    
+
+    public String getPuntoDeVenta() {
+        return puntoDeVenta;
+    }
+
+    public void setPuntoDeVenta(String puntoDeVenta) {
+        this.puntoDeVenta = puntoDeVenta;
+    }
 }

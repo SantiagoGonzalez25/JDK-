@@ -1,17 +1,51 @@
-package usuarios;
+    package usuarios;
 
-public class Coordinador extends Usuario {
-    private String RutasEstablecidas; 
-    @SuppressWarnings("unused") // es una advertencia de que nunca se uso voy a agregar esta anotacion de ttodos 
-    private String AreaEstablecida; //area en la que el coordinador opera
+    public class Coordinador extends Usuario {
+        private String rutasEstablecidas; 
+        @SuppressWarnings("unused") 
+        private String areaEstablecida; 
+        
+       public Coordinador(long idUsuario, String nombre, String contrasena, String email,
+                       String rutasEstablecidas, String areaEstablecida) {
+        super(idUsuario, nombre, contrasena, email);
+        this.rutasEstablecidas = rutasEstablecidas;
+        this.areaEstablecida = areaEstablecida;
+    }
+
+        public String crearRutas() {
+        return rutasEstablecidas;
+    }
+
+    public String getAreaEstablecida() {
+        return areaEstablecida;
+    }
+
+    public void setRutasEstablecidas(String rutasEstablecidas) {
+        this.rutasEstablecidas = rutasEstablecidas;
+    }
     
-    public Coordinador(long id, String nombre, String contraseña, String Email, String rutasEstablecidas, String AreaEstablecida) {
-        super(id, nombre, contraseña, Email);
-        this.RutasEstablecidas = rutasEstablecidas;
-        this.AreaEstablecida = AreaEstablecida;
     }
 
-    public String DefinirRutas(){
-        return RutasEstablecidas;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,26 +4,45 @@ import java.io.File;
 import java.sql.Date;
 
 public class Informe {
-    @SuppressWarnings("unused")
-    private long IdInforme;
-    @SuppressWarnings("unused")
-    private Date Periodo; // en vez de string date 
-    private File FormatoDeImportacion; // En vez de string file 
-    private boolean Informe = false;
+    private long idInforme;
+    private Date periodo;
+    private File formatoExportacion;
+    private boolean generado;
+
+    public Informe(long idInforme, Date periodo, File formatoExportacion, boolean generado) {
+        this.idInforme = idInforme;
+        this.periodo = periodo;
+        this.formatoExportacion = formatoExportacion;
+        this.generado = generado;
+    }
+
+    public boolean generarReporte() {
+        this.generado = true;
+        return generado;
+    }
+
+    public File exportarInforme() {
+        return formatoExportacion;
+    }
+
     
-    public Informe(long IdInforme, Date periodo, File formatoDeImportacion, boolean informe) {
-        this.IdInforme = IdInforme;
-        this.Periodo = periodo;
-        this.FormatoDeImportacion = formatoDeImportacion;
-        this.Informe = informe;
-    }
-    public boolean GenerarReporte(){
-        Informe = true;
-        return Informe;
-    }
-    public File ExportarInforme(){
-        return FormatoDeImportacion;
+    public long getIdInforme() {
+        return idInforme;
     }
 
+    public boolean isGenerado() {
+        return generado;
+    }
 
+    public Date getPeriodo() {
+        return periodo;
+    }
+    
+    public void setPeriodo(Date periodo) {
+        this.periodo = periodo;
+    }
+
+    public void setFormatoExportacion(File formatoExportacion) {
+        this.formatoExportacion = formatoExportacion;
+    }
 }
